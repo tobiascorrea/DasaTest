@@ -1,8 +1,8 @@
 package core;
 
-import static core.DriverFactory.getDriver;
-
 import org.openqa.selenium.By;
+
+import static core.DriverFactory.getDriver;
 
 public class DSL {
 
@@ -11,7 +11,7 @@ public class DSL {
 	public DSL() {
 		this.table = new DSLTable();
 	}
-	
+
 	public void abrirNavegador(String url) {
 		getDriver().get(url);
 	}
@@ -27,6 +27,4 @@ public class DSL {
 	public DSLTable getTable() {
 		return this.table;
 	}
-	
-	
 }

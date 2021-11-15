@@ -1,18 +1,18 @@
 package core;
 
-import static core.DriverFactory.getDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import static core.DriverFactory.getDriver;
 
 public class DSLTable {
 
 	public boolean contains(String elementId, String search) {
 		List<WebElement> elements = buscaTodosElementosTabela(elementId);
-		for (int i = 0; i < elements.size(); i++) {
-			String text = elements.get(i).getText();
+		for (WebElement element : elements) {
+			String text = element.getText();
 			if (text.contains(search)) {
 				return true;
 			}
@@ -32,7 +32,6 @@ public class DSLTable {
 
 		return index;
 	}
-
 
 	private List<WebElement> buscaTodosElementosTabela(String elementId) {
 		return getDriver().findElements(By.xpath(elementId));
