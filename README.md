@@ -9,11 +9,20 @@ Caso seja necessário atualizar o arquivo Pom.xml para baixar as dependências.
 
 **Pastas do projeto**
 
-**core** -> pacote que tem todo os fontes compartilhados na aplicação
-**elemets** -> pacote que tem as classes com as strings que fazem referências aos elementos da página como (id, class, name, xpath) etc..
-**pages** -> pacote que terá as classes que irá representar a página que esta em teste ex: TodoPage, LoginPage etc..
-**runner** -> pacote que terá a classe que irá rodar a aplicação e gerar um arquivo de reports
-**steps** -> pacote com a classe que será a execução dos steps definitions , criado em BDD, arquivo se encontra em **test/resources/features/todo.cadastrar.feature**
+**core** 
+ - Pacote que tem todo os fontes compartilhados na aplicação
+ - 
+**elemets** 
+- Pacote que tem as classes com as strings que fazem referências aos elementos da página como (id, class, name, xpath) etc..
+
+**pages** 
+- Pacote que terá as classes que irá representar a página que esta em teste ex: TodoPage, LoginPage etc..
+
+**runner** 
+- Pacote que terá a classe que irá rodar a aplicação e gerar um arquivo de reports
+
+**steps** 
+- Pacote com a classe que será a execução dos steps definitions , criado em BDD, arquivo se encontra em **test/resources/features/todo.cadastrar.feature**
 
 ## Como executar
 No projeto src/main/java/runner tem um arquivo chamado **TodoRunner**, nesta classe com botão direito executar o projeto
